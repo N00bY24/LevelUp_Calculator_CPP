@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const enum LevelUp {
+enum class LevelUp {
 	None = 0,
 	Level1 = 20,
 	Level2 = 50,
@@ -34,34 +34,34 @@ int InputXP() {
 
 void LevelUpCalculator(int xP) {
 	int xp = xP;
-	if (xp < 20) {
+	if (xp < (int)LevelUp::None) {
 		cout << "You are not level up yet!" << endl;
 	}
-	else if (xp < 50) {
+	else if (xp < (int)LevelUp::Level1) {
 		cout << "You are level 1!" << endl;
 	}
-	else if (xp < 100) {
+	else if (xp < (int)LevelUp::Level2) {
 		cout << "You are level 2!" << endl;
 	}
-	else if (xp < 250) {
+	else if (xp < (int)LevelUp::Level3) {
 		cout << "You are level 3!" << endl;
 	}
-	else if (xp < 600) {
+	else if (xp < (int)LevelUp::Level4) {
 		cout << "You are level 4!" << endl;
 	}
-	else if (xp < 1100) {
+	else if (xp < (int)LevelUp::Level5) {
 		cout << "You are level 5!" << endl;
 	}
-	else if (xp < 2000) {
+	else if (xp < (int)LevelUp::Level6) {
 		cout << "You are level 6!" << endl;
 	}
-	else if (xp < 3200) {
+	else if (xp < (int)LevelUp::Level7) {
 		cout << "You are level 7!" << endl;
 	}
-	else if (xp < 5000) {
+	else if (xp < (int)LevelUp::Level8) {
 		cout << "You are level 8!" << endl;
 	}
-	else if (xp < 8000) {
+	else if (xp < (int)LevelUp::Level9) {
 		cout << "You are level 9!" << endl;
 	}
 }
